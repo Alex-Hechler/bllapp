@@ -162,13 +162,13 @@ public class SkillTreeDbHelper extends SQLiteOpenHelper {
         long a = insertNode(db,"Arbeitsgedächnis",  "arbeitsgedaechnis/einleitungAG.html", root);
         long b = insertNode( db,"Weg 2",  "basis/test.html", root);
         long datenC = instertStrategieDaten(db,StrategieDatenEntry.STRATEGIE_DATA_TYPE_VERLEGEN,"arbeitsgedaechnis/verlegen/verlegenApp.html", "arbeitsgedaechnis/verlegen/notification.html");
-        long c = insertStrategieNode( db,"Strategie",  "arbeitsgedaechnis/verlegen/verlegen.html", a,datenC);
+        long c = insertStrategieNode( db,"Verlegen Übung",  "arbeitsgedaechnis/verlegen/verlegen.html", a,datenC);
         long d = insertNode( db,"Weg 2.2", "basis/test.html", b);
         long datenE = instertStrategieDaten(db,StrategieDatenEntry.STRATEGIE_DATA_TYPE_STANDARD, null,null);
         long e = insertStrategieNode( db,"Notizbuch", "arbeitsgedaechnis/notizbuch.html", a, datenE);
         //TODO: User entfernen
-        long userId = insertBenutzer(db);
-        insertNodeUserData(db, true, false, userId, root);
+        // long userId = insertBenutzer(db);
+        // insertNodeUserData(db, true, false, userId, root);
     }
 
     private void insertNodeUserData(SQLiteDatabase db, boolean b, boolean b1, long id, long root) {
