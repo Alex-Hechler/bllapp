@@ -1,0 +1,32 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html">
+    <body>
+        <h1>Eine Überschrift</h1>
+    <p>Bild
+    <img src="file:///android_asset/basis/neurodiversity_200.png" alt="neurodiversity Bild">
+    </p>
+    <p>
+        Externer Link
+        <a href="http://rheinwerk-verlag.de/">Verlagseite</a>
+    </p>
+    <p>
+        interner Link
+      <form action="intern://finished"  method="get">
+                <button>ok</button>
+        </form>
+    </p>
+    <p>
+        Eingabe:
+        <form action="intern://finished" method="get" oninput="wert.value=parseInt(test.value)">
+            <fieldset>
+                <input id="test" name="zahl" type="range" value="50" min="0" max="100" step="1">
+                <output name="wert" for="test">50</output>
+                <input type="submit" value="speichern">
+            </fieldset>
+        </form>
+    </p>
+    <p>
+        Gemerkte Zahl laden: $zahl
+    </p>
+    </body>
+</html>

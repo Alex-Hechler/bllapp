@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<body>
+<section>
+    <p>
+        Gegenstand: $gegenstandName<br>
+        Platz: $aufbewahrungsOrt
+    </p>
+    <p>
+        Schade.<br>
+        Dann suche den Gegenstand jetzt.
+    </p>
+    <details>
+        <summary>Hilfe beim Suchen</summary>
+        $falscherOrtListe
+    </details>
+    <form action="intern://executeStrategieAndFinish/createVerlaufTaeglicheAbfrage" method="get">
+        <input type="hidden" name="gefunden" value="false">
+        <p>
+        Da habe ich es gefunden:
+            <input type ="text" name="falscherOrt" size="30">
+        </p>
+        <input type="submit" value="Ok" >
+    </form>
+</section>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <body>
+    <p>
+    Dein aktueller Gegenstand: $gegenstandName<br>
+    Dein aktueller Aufbewahrungsort: $aufbewahrungsOrt<br>
+    <br>
+    $prozessVerlegen
+    </p>
+    <p>
+        <form action="intern://executeStrategie/verwendenAus" method="get">
+            <button>Ich möchte diese Strategie nicht mehr verwenden</button>
+        </form>
+    </p>
+    <p>
+        <form action="intern://executeStrategie/setzeVariable" method="get">
+            <fieldset>
+                <legend>Werte</legend>
+                Gegenstand <input type="text" name="gegenstandName" value="$gegenstandName"><br>
+                Ort <input type="text" name="aufbewahrungsOrt" value="$aufbewahrungsOrt"><br>
+                Uhrzeit der Erinnerung <input type="time" name="uhrzeit" value="$uhrzeit"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Eingabe</legend>
+                <input type="submit" value="Werte ändern">
+                <input type="reset" value="Abbrechen">
+            </fieldset>
+        </form>
+    </p>
+
+    </body>
+</html>

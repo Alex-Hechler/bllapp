@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_navigation_page_nutzerprofil"
+        android:enabled="true"
+        android:icon="@drawable/cat"
+        android:title="Name"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/bottom_navigation_page_skilltree"
+        android:enabled="true"
+        android:icon="@drawable/ic_list_strategie_skilltree"
+        android:title="@string/text_navigation_titel_1" />
+    <item
+        android:id="@+id/bottom_navigation_page_strategie"
+        android:enabled="true"
+        android:icon="@drawable/ic_strategie_notizbuch"
+        android:title="@string/text_navigation_titel_strategie" />
+    <item
+        android:id="@+id/bottom_navigation_page_apps"
+        android:enabled="true"
+        android:icon="@drawable/ic_list_strategie_apps"
+        android:title="@string/text_navigation_title_2"
+        />
+
+
+</menu>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<body>
+		<section>
+			<p>
+				Gegenstand: $gegenstandName<br>
+				Platz: $aufbewahrungsOrt
+			</p>
+				<p>Befindet sich der Gegenstand auf seinem Platz?</p>
+			<form action="intern://loadHTML/arbeitsgedaechnis/verlegen/notificationJa.html" method="get">
+				<p>
+					<input type="submit" name="gefunden" value="Ja">
+				</p>
+			</form>
+			<form action="intern://loadHTML/arbeitsgedaechnis/verlegen/notificationNein.html" method="get">
+				<p>
+					<input type="submit" name="gefunden" value="Nein">
+				</p>
+			</form>
+		</section>
+	</body>
+</html>

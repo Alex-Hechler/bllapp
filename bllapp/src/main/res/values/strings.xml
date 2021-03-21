@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Exekutive Funkionen Infos</string>
+    <string name="title_activity_content_activty">ContentActivty</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="loeschen">Loeschen</string>
+    <string name="abbrschen">Abbrechen</string>
+
+    <string name="dialog_profilloeschen">Bist du sicher das du dein Profil löschen willst? Dein Fortschitt geht dauerhaft verloren</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="changeList">Liste wechseln</string>
+    <string name="listStrategieApps">Strategie Apps</string>
+    <string name="stopUsingStrategie">Strategie nicht mehr verwenden</string>
+    <string name="reminder">Erinnerungen</string>
+    <string name="erinnerungen_stumm">Erinnnerungen stumm</string>
+    <string name="eingeschlatet">ein</string>
+    <string name="text_navigation_titel_1">Skill Tree</string>
+    <string name="text_navigation_title_2">Apps</string>
+    <string name="text_page_skilltree">Skill Tree</string>
+    <string name="text_navigation_titel_strategie">Strategie</string>
+</resources>

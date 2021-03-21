@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <body>
+        <p>
+            Du verbringst Stunden mit der Suche nach Schlüsseln, Handies und ähnlichem?</br>
+            Das Arbeitsgedächnis ist nicht die einzige EF die damit zu tun hat. Das ist sowieso selten der Fall.
+            Aber wenn du in einen Raum gehst und vergisst was du wolltest, das ist dein Arbeitsgedächnis.
+            Wenn du etwas abstellst und 30 Sekunden später nicht mehr sagen kannst was oder wo,
+            hat das auch mit dem Arbeitsgedächnis zu tun.
+        </p>
+        <P>
+            Eine einfache Strategie dafür ist alles braucht einen festen Platz.
+            Einfacher gesagt als getan, ich weiß.
+            Dabei kann dir diese App unterstützen.
+        </P>
+        <p>
+            Um erfolgreich zu sein ist, es wichtig nicht alles aufeinmal machen zu wollen,
+            sondern einen Schritt nach dem andrern zu machen.<br/>
+            Wir beginnen also mit einen Gegenstand den du oft brauchst und oft suchst:
+            <form action="intern://executeStrategie/setzeVariable" method="get">
+                <input type="text" name="gegenstandName" value="$gegenstandName">
+                <input type="submit">
+            </form>
+        </p>
+        <p>
+            Jetzt wo wir einen Gegenstand haben, brauchen wir einen festen Platz, wo du ihn
+            nach der Nutzung oder wenn du das Haus betritst oder verlässt hintun kannst.
+            <form action="intern://executeStrategie/setzeVariable" method="get">
+                <input type="text" name="aufbewahrungsOrt" value="$aufbewahrungsOrt">
+                <input type="submit">
+            </form>
+        </p>
+        <p>
+            Zu Beginn wird es vermutlich schwirig den Gegensatand tatzächlich an den Ort zu legen.
+            Deshalb setzten wir jetzt eine Zeit zu der du jeden Tag Erinnert wirst zu checken ob der
+            Gegenstand auf seinem Platz liegst.
+                <form action="intern://executeStrategie/setzteTaeglicheNotifizierung" method="get">
+                    <input type="time" name="uhrzeit" value="$uhrzeit">
+                    <input type="submit">
+                </form>
+        </p>
+        <style type="text/css">
+            #fehlerVerwenden{
+                color: red;
+				display: $verlegen_fehler;
+            }
+        </style>
+        <p id="fehlerVerwenden">
+            Du musst das Formular erst vollständig ausfüllen.
+        </p>
+        <p>
+            <form action="intern://verwendeStrategie" method="get">
+                <button>Strategie verwenden</button>
+            </form>
+            <form action="intern://strategieNichtVerwenden" method="get">
+                <button>Ich möchte diese Strategie nicht verwenden</button>
+            </form>
+        </p>
+    </body>
+</html>
