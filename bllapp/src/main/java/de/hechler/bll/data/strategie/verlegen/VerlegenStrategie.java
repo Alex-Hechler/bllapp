@@ -115,7 +115,7 @@ public class VerlegenStrategie extends Strategie {
 
     @Override
     public NotificationInfo getNotificationInfo() {
-        String title = "Verlegen Strategie";
+        String title = "Verlegen Übung";
         String text = "Wo ist "+gegenstandName+"?";
         return new NotificationInfo(title, text);
     }

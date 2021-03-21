@@ -125,9 +125,9 @@ public class AppListActivity extends AppCompatActivity {
     public void erzeugeAppListe(){
         BenutzerManager benutzerManager = BenutzerManager.getInstance();
         if(verwendeteApps) {
-            setTitle("Apps");
+            setTitle("Übungen");
         }else{
-            setTitle("nicht verwendete Apps");
+            setTitle("nicht verwendete Übungen");
         }
         StrategieDatenDAO strategieDatenDAO = StrategieDatenDAO.getInstance();
         ArrayList<Strategie> strategies = strategieDatenDAO.readAppListForBenutzerID(benutzerManager.getAktuellerBenutzerId(), verwendeteApps);
