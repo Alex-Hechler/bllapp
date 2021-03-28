@@ -1,0 +1,93 @@
+//// Diese Datei enthaelt die textuelle Beschreibung des ER-Diagramms
+//// und kann in https://dbdiagram.io importiert werden.
+
+Table benutzer as Ben [headercolor: #22B14C] {
+  id int [pk,increment] // auto-increment
+  name text [not null, unique]
+  iconAssetId text
+}
+
+Table nodeModel as Node  [headercolor: #00A5EC] {
+  id int [pk, increment]
+  type nodeTypen
+  name text
+  filename text
+  parentID int [ref: > Node.id]
+}
+Table nodeUserData [headercolor: #22B14C] {
+  id int [pk, increment]
+  freigeschaltet boolean
+  besucht boolean
+  userId int [ref: - benutzer.id]
+  nodeModelId int [ref: > nodeModel.id]
+   Indexes {
+    (userId, nodeModelId)[unique]
+  }
+}
+
+
+Table strategieNodeModel as StNode[headercolor: #3F48CD] {
+  id int [pk, ref: - Node.id]
+  idStrategieDaten int [ref: - strategieDaten.id]
+}
+
+
+Enum nodeTypen{
+  LEKT
+  STRA
+}
+Table strategieUserDaten[headercolor: #22B14C] {
+  id int [pk, increment]
+  wirdVerwendet boolean
+  notificationActive boolean
+  nextBackgroundTrigger datetime
+  userId int [ref: - benutzer.id]
+  strategieId int [ref: > strategieDaten.id]
+   Indexes {
+    (userId, strategieId)[unique]
+  }
+}
+
+Table strategieDaten[headercolor: #3F48CD] {
+  id int [pk, increment]
+  filenameApp text
+  filenameNotification text
+  type datenTyp
+}
+Table notificationTime[headercolor: #3F48CD] {
+  id int [pk, increment]
+  ersteNotification datetime
+  wiederhohlung wiederhohlungsTyp
+  idStrategieUserDaten int [ref: > strategieUserDaten.id]
+
+}
+Table strategieVerlaufsDaten[headercolor: #3F48CD] {
+  id int [pk, increment]
+  type datenTypen
+  zeitstempel date
+  act varchar(15)
+  info text
+  idStrategieUserDaten int [ref: > strategieUserDaten.id]
+}
+
+Enum datenTyp{
+  standard
+  verlegenStrategie
+}
+Enum wiederhohlungsTyp{
+  TAG
+  EINMAL
+  WOCHE
+}
+Table verlegenStrategieUserDaten[headercolor: #22B14C] {
+  id int [pk, ref: - strategieUserDaten.id]
+  gegenstandName text
+  aufbewahrungsOrt text
+}
+
+Table verlegenStrategieVerlaufsDaten[headercolor: #3F48CD] {
+  id int [pk, ref: - strategieVerlaufsDaten.id]
+  gefunden boolean
+  falscherOrt text
+}
+
