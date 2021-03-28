@@ -5,7 +5,7 @@ import de.hechler.bll.data.skillTree.NodeModel;
 import de.hechler.bll.data.skillTree.TreeModel;
 import de.hechler.bll.persistenz.dao.NodeModelDAO;
 
-public class SkillTreeController {
+public class  SkillTreeController {
 
     public SkillTreeController() {
 

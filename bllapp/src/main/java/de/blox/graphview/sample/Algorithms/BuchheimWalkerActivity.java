@@ -8,9 +8,9 @@ import de.blox.graphview.Graph;
 import de.blox.graphview.GraphView;
 import de.blox.graphview.Node;
 import de.blox.graphview.sample.GraphActivity;
-import de.blox.graphview.sample.R;
 import de.blox.graphview.tree.BuchheimWalkerAlgorithm;
 import de.blox.graphview.tree.BuchheimWalkerConfiguration;
+import de.hechler.bll.R;
 
 public class BuchheimWalkerActivity extends GraphActivity {
 

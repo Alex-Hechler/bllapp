@@ -120,7 +120,7 @@ public class Strategie {
         save();
     }
     //TODO test entfernen
-    public static boolean test = true;
+    public static boolean test = false;
     public synchronized void requestWork(Context context){
         BenutzerManager benutzerManager = BenutzerManager.getInstance();
         if(test){

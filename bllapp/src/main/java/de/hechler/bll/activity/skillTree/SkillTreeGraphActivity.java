@@ -26,7 +26,8 @@ import de.blox.graphview.Graph;
 import de.blox.graphview.GraphAdapter;
 import de.blox.graphview.GraphView;
 import de.blox.graphview.Node;
-import de.blox.graphview.sample.R;
+
+import de.hechler.bll.R;
 import de.hechler.bll.activity.skillTree.SkillTreeActivity.NodeInfo;
 
 public abstract class SkillTreeGraphActivity extends AppCompatActivity {

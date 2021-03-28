@@ -15,7 +15,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
-import de.blox.graphview.sample.R;
+
+import de.hechler.bll.R;
 import de.hechler.bll.activity.skillTree.ContentActivity;
 import de.hechler.bll.activity.skillTree.SkillTreeActivity;
 import de.hechler.bll.activity.strategie.StrategieActivity;

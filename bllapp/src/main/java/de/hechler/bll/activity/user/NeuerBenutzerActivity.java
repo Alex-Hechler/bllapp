@@ -15,7 +15,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.Random;
 
-import de.blox.graphview.sample.R;
+
+import de.hechler.bll.R;
 import de.hechler.bll.activity.skillTree.SkillTreeActivity;
 import de.hechler.bll.data.Benutzer;
 import de.hechler.bll.data.BenutzerManager;

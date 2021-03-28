@@ -16,7 +16,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 
-import de.blox.graphview.sample.R;
+
+import de.hechler.bll.R;
 import de.hechler.bll.activity.list.AppListActivity;
 import de.hechler.bll.activity.list.StrategieListActivity;
 import de.hechler.bll.data.BenutzerManager;

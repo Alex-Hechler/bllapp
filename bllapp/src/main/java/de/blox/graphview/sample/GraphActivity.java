@@ -17,6 +17,7 @@ import de.blox.graphview.Graph;
 import de.blox.graphview.GraphAdapter;
 import de.blox.graphview.GraphView;
 import de.blox.graphview.Node;
+import de.hechler.bll.R;
 
 public abstract class GraphActivity extends AppCompatActivity {
     private int nodeCount = 1;

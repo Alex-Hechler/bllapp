@@ -23,9 +23,10 @@ import de.blox.graphview.Graph;
 import de.blox.graphview.GraphAdapter;
 import de.blox.graphview.GraphView;
 import de.blox.graphview.Node;
-import de.blox.graphview.sample.R;
+
 import de.blox.graphview.tree.BuchheimWalkerAlgorithm;
 import de.blox.graphview.tree.BuchheimWalkerConfiguration;
+import de.hechler.bll.R;
 import de.hechler.bll.SkillTreeController;
 import de.hechler.bll.activity.list.AppListActivity;
 import de.hechler.bll.activity.list.StrategieListActivity;

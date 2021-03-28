@@ -2,7 +2,8 @@ package de.hechler.bll.data;
 
 import java.util.ArrayList;
 
-import de.blox.graphview.sample.R;
+
+import de.hechler.bll.R;
 import de.hechler.bll.persistenz.dao.BenutzerDAO;
 
 public class BenutzerManager {

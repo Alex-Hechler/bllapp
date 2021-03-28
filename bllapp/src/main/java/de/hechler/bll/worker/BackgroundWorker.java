@@ -15,7 +15,8 @@ import androidx.core.app.NotificationManagerCompat;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
-import de.blox.graphview.sample.R;
+
+import de.hechler.bll.R;
 import de.hechler.bll.activity.strategie.StrategieActivity;
 import de.hechler.bll.data.BenutzerManager;
 import de.hechler.bll.data.notification.NotificationInfo;
