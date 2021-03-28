@@ -113,7 +113,6 @@
         style="@style/Widget.Design.BottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_anchor="@+id/zoomLayout"
         app:layout_anchorGravity="bottom|center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/menu_navigation" />
