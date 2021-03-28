@@ -12,7 +12,8 @@ import android.widget.TextView;
 import androidx.appcompat.view.menu.ActionMenuItemView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import de.blox.graphview.sample.R;
+import de.hechler.bll.R;
+
 
 public class BilderGridAdapter extends RecyclerView.Adapter<BilderGridAdapter.ViewHolder>{
         Activity parentActivity;

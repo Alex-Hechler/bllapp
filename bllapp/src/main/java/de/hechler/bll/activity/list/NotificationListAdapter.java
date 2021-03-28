@@ -10,7 +10,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import de.blox.graphview.sample.R;
+
+import de.hechler.bll.R;
 import de.hechler.bll.data.strategie.Strategie;
 
 public class NotificationListAdapter extends ArrayAdapter<Strategie> {

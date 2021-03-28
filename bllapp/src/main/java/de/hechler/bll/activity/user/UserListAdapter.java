@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import de.blox.graphview.sample.R;
+import de.hechler.bll.R;
 import de.hechler.bll.data.Benutzer;
 import de.hechler.bll.data.BenutzerManager;
 import de.hechler.bll.data.strategie.Strategie;

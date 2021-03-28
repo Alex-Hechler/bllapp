@@ -21,7 +21,7 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import de.blox.graphview.sample.R;
+import de.hechler.bll.R;
 import de.hechler.bll.activity.list.AppListActivity;
 import de.hechler.bll.activity.list.StrategieListActivity;
 import de.hechler.bll.activity.skillTree.SkillTreeActivity;

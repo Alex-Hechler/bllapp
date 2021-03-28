@@ -20,7 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
-import de.blox.graphview.sample.R;
+import de.hechler.bll.R;
 import de.hechler.bll.activity.list.AppListActivity;
 import de.hechler.bll.activity.skillTree.SkillTreeActivity;
 import de.hechler.bll.data.BenutzerManager;

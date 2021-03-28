@@ -15,7 +15,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 
-import de.blox.graphview.sample.R;
+
+import de.hechler.bll.R;
 import de.hechler.bll.data.skillTree.NodeModel;
 import de.hechler.bll.data.skillTree.StrategieNodeModel;
 import de.hechler.bll.worker.BackgroundWorker;
