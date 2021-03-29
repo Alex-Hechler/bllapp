@@ -9,13 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name="de.hechler.bll.activity.user.BenutzerProfilActivity" android:exported="true"></activity>
+        <activity android:name="de.hechler.bll.activity.user.BenutzerProfilActivity" android:exported="false"></activity>
         <activity
             android:name="de.hechler.bll.activity.user.ImageSelectActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name="de.hechler.bll.activity.user.NeuerBenutzerActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity android:name="de.hechler.bll.activity.user.LogInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,10 +40,10 @@
         <activity android:name="de.hechler.bll.activity.skillTree.SkillTreeActivity" />
         <activity
             android:name="de.hechler.bll.activity.list.AppListActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name="de.hechler.bll.activity.list.StrategieListActivity"
-            android:exported="true" />
+            android:exported="false" />
     </application>
 
 </manifest>
