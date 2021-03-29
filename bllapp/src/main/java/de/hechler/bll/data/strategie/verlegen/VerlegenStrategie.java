@@ -83,7 +83,24 @@ public class VerlegenStrategie extends Strategie {
     }
 
     private int getTageHintereinanderGefunden(){
-        return 2;
+        if (strategieVerlaufsDatenListe.isEmpty()) {
+            StrategieUserDatenDAO strategieUserDatenDAO = StrategieUserDatenDAO.getInstance();
+            strategieUserDatenDAO.readVerlaufForStrategie(this);
+        }
+        int sum = 0;
+        ArrayList<String> falscheOrte = new ArrayList<>();
+        for(StrategieVerlaufsDaten svd: strategieVerlaufsDatenListe){
+            if(svd instanceof VerlegenStrategieVerlaufsDaten){
+                VerlegenStrategieVerlaufsDaten vsvd = (VerlegenStrategieVerlaufsDaten) svd;
+                if(vsvd.isGefunden()) {
+                    sum += 1;
+                }
+                else {
+                    sum = 0;
+                }
+            }
+        }
+        return sum;
     }
 
     /**
@@ -91,8 +108,10 @@ public class VerlegenStrategie extends Strategie {
      * @return
      */
     private ArrayList<String> getFalscherOrtListe(){
-        StrategieUserDatenDAO strategieUserDatenDAO = StrategieUserDatenDAO.getInstance();
-        strategieUserDatenDAO.readVerlaufForStrategie(this);
+        if (strategieVerlaufsDatenListe.isEmpty()) {
+            StrategieUserDatenDAO strategieUserDatenDAO = StrategieUserDatenDAO.getInstance();
+            strategieUserDatenDAO.readVerlaufForStrategie(this);
+        }
         ArrayList<String> falscheOrte = new ArrayList<>();
         for(StrategieVerlaufsDaten svd: strategieVerlaufsDatenListe){
             if(svd instanceof VerlegenStrategieVerlaufsDaten){
@@ -134,7 +153,7 @@ public class VerlegenStrategie extends Strategie {
 
     @Override
     public boolean kannVerwendetWerden() {
-        if(gegenstandName==null||aufbewahrungsOrt==null)
+        if(gegenstandName==null||aufbewahrungsOrt==null || notificationScheduler.getNextDate()==null)
             return false;
         return super.kannVerwendetWerden();
     }

@@ -20,7 +20,7 @@ public final class HTMLconverter {
      * @return
      */
     public static Date uhrzeitStringToDate(String uhrzeitString){
-        if(uhrzeitString==null){
+        if(uhrzeitString==null || uhrzeitString.isEmpty()){
             return null;
         }
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm");

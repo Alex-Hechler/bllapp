@@ -76,9 +76,11 @@ public class Strategie {
             case KOMMANDO_SETZE_TAEGLICHE_NOTIFIZIERUNG:
                 String uhrzeitString = parameter.get("uhrzeit");
                 Date uhrzeit = HTMLconverter.uhrzeitStringToDate(uhrzeitString);
-                notificationScheduler.setzeTaeglicheNotification(uhrzeit);
-                if(notificationActive){
-                    requestWork(SkillTreeDbHelper.getDbcontext());
+                if (uhrzeit != null) {
+                    notificationScheduler.setzeTaeglicheNotification(uhrzeit);
+                    if (notificationActive) {
+                        requestWork(SkillTreeDbHelper.getDbcontext());
+                    }
                 }
                 break;
             case KOMMANDO_VERWENDEN_AUS:
