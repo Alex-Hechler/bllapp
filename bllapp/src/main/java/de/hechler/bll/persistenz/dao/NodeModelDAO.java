@@ -32,7 +32,7 @@ public class NodeModelDAO {
         }
         return instance;
     }
-    //unnötig?
+
     public void create(NodeModel n){
         String type = n.getType();
 

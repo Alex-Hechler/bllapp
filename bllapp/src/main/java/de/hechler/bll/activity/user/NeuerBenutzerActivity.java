@@ -83,9 +83,11 @@ public class NeuerBenutzerActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        selecedUserImage = data.getIntExtra("result",selecedUserImage);
-        ImageView profilPicture = findViewById(R.id.img_profilbild);
-        profilPicture.setImageResource(BenutzerManager.USER_IMAGES[selecedUserImage]);
+        if (data != null) { // wenn der zurueck button geklickt wurde, dann gibt es kein data intent.
+            selecedUserImage = data.getIntExtra("result", selecedUserImage);
+            ImageView profilPicture = findViewById(R.id.img_profilbild);
+            profilPicture.setImageResource(BenutzerManager.USER_IMAGES[selecedUserImage]);
+        }
 
     }
 }

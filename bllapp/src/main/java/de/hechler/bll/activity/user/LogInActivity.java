@@ -23,6 +23,8 @@ public class LogInActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // falls bereits ein Benutzer eingeloggt war, diesen ausloggen
+        BenutzerManager.getInstance().setAktuellerBenutzer(null);
         setContentView(R.layout.activity_log_in);
 
         SkillTreeDbHelper.setzteDbcontext(this);
@@ -30,9 +32,17 @@ public class LogInActivity extends AppCompatActivity {
         list = findViewById(R.id.user_list);
         erzeugeNutzerListe();
         setupToolbar();
-
-
     }
+
+    /**
+     * Beende die komplette App, wenn beim Login die Zuruecktaste gedrueckt wird.
+     * https://stackoverflow.com/questions/21253303/exit-android-app-on-back-pressed/53035807
+     */
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
+    }
+
     private void setupToolbar(){
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_list);
         setSupportActionBar(toolbar);

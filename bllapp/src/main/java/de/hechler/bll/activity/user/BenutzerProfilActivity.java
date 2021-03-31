@@ -188,7 +188,7 @@ public class BenutzerProfilActivity extends AppCompatActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode==REQUESTCODE_PROFILBILD){
+        if((requestCode==REQUESTCODE_PROFILBILD) && (data != null)){
             Benutzer aktuellerBenutzer = BenutzerManager.getInstance().getAktuellerBenutzer();
             aktuellerBenutzer.setIconAssetId(data.getIntExtra("result", aktuellerBenutzer.getIconAssetId()));
 

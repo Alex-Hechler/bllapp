@@ -20,6 +20,7 @@ import java.util.HashMap;
 import de.hechler.bll.R;
 import de.hechler.bll.activity.list.AppListActivity;
 import de.hechler.bll.activity.list.StrategieListActivity;
+import de.hechler.bll.activity.user.LogInActivity;
 import de.hechler.bll.data.BenutzerManager;
 import de.hechler.bll.data.strategie.Strategie;
 import de.hechler.bll.persistenz.SkillTreeDbHelper;
@@ -155,7 +156,8 @@ public class StrategieActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this, AppListActivity.class);
-        startActivityForResult(intent, 0);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
     }
 
     private String replacePlatzhalter(String resources) {

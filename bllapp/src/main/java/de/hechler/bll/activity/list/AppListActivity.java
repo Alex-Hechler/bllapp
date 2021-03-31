@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -18,6 +19,7 @@ import de.hechler.bll.R;
 import de.hechler.bll.activity.skillTree.SkillTreeActivity;
 import de.hechler.bll.activity.strategie.StrategieActivity;
 import de.hechler.bll.activity.user.BenutzerProfilActivity;
+import de.hechler.bll.activity.user.LogInActivity;
 import de.hechler.bll.data.Benutzer;
 import de.hechler.bll.data.BenutzerManager;
 import de.hechler.bll.data.strategie.Strategie;
@@ -40,21 +42,25 @@ public class AppListActivity extends AppCompatActivity {
         SkillTreeDbHelper.setzteDbcontext(this);
         setContentView(R.layout.activity_list);
 
-
         setupToolbar();
         setupNavigation();
-
-
-
 
         list = findViewById(R.id.strategie_list);
         textView = findViewById(R.id.title);
 
-
-
-            erzeugeAppListe();
-
+        erzeugeAppListe();
     }
+
+    /**
+     * Wenn die Zurueck Taste gedrueck wird, dann zur Login Seite wechseln.
+     * @return
+     */
+    public void onBackPressed() {
+        Intent intent = new Intent(this, LogInActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
+
     BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener =
             item -> {
                 Intent intent;

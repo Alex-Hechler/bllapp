@@ -31,11 +31,13 @@ import de.hechler.bll.SkillTreeController;
 import de.hechler.bll.activity.list.AppListActivity;
 import de.hechler.bll.activity.list.StrategieListActivity;
 import de.hechler.bll.activity.user.BenutzerProfilActivity;
+import de.hechler.bll.activity.user.LogInActivity;
 import de.hechler.bll.data.Benutzer;
 import de.hechler.bll.data.BenutzerManager;
 import de.hechler.bll.data.skillTree.NodeModel;
 import de.hechler.bll.data.skillTree.TreeModel;
 import de.hechler.bll.persistenz.SkillTreeDbHelper;
+import de.hechler.bll.worker.BackgroundWorker;
 
 public class SkillTreeActivity extends SkillTreeGraphActivity {
     public static SkillTreeActivity instance;
@@ -152,6 +154,18 @@ public class SkillTreeActivity extends SkillTreeGraphActivity {
         SkillTreeDbHelper.setzteDbcontext(this);
         super.onCreate(savedInstanceState);
     }
+
+
+    /**
+     * Wenn die Zurueck Taste gedrueck wird, dann zur Login Seite wechseln.
+     * @return
+     */
+    public void onBackPressed() {
+        Intent intent = new Intent(this, LogInActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
+
 
     @Override
     protected void nodeClicked(long id, GraphAdapter adapter) {
