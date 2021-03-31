@@ -48,7 +48,7 @@
         android:layout_marginTop="30dp"
         android:enabled="true"
         android:inputType="textPersonName"
-        android:selectAllOnFocus="false"
+        android:selectAllOnFocus="true"
         android:text="Benutzername"
         app:layout_constraintBottom_toTopOf="@+id/btn_erstellen_bestaetigen"
         app:layout_constraintEnd_toEndOf="parent"
