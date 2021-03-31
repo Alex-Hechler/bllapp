@@ -30,10 +30,10 @@ public class StrategieVerlaufsDatenDAO {
         }
         return instance;
     }
-    public void create(StrategieVerlaufsDaten s,long idStrategieDaten){
+    public void create(StrategieVerlaufsDaten s,long idStrategieUserDaten){
         String type = s.getType();
 
-        ContentValues valuesStandard = contentValuesForStrategieVerlaufsDaten(s, idStrategieDaten);
+        ContentValues valuesStandard = contentValuesForStrategieVerlaufsDaten(s, idStrategieUserDaten);
         long id = db.insertOrThrow(StrategieVerlaufsDatenEntry.TABLE_NAME,null,valuesStandard);
         s.setId(id);
 

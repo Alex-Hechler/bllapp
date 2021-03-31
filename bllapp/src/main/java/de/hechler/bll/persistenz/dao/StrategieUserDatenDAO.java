@@ -74,7 +74,7 @@ public class StrategieUserDatenDAO {
         //falls die Verlaufsdaten noch nicht in der Tabelle sind werden sie erzeugt
         for(StrategieVerlaufsDaten svd : s.getStrategieVerlaufsDatenListe()){
             if(svd.getId()==-1){
-                strategieVerlaufsDatenDAO.create(svd, s.getId());
+                strategieVerlaufsDatenDAO.create(svd, s.getUserDataId());
             }
         }
         //Typ spezifesch
