@@ -1,5 +1,6 @@
 # Built application files
 *.apk
+*.aab
 *.ap_
 
 # Files for the ART/Dalvik VM
@@ -44,3 +45,4 @@ captures/
 .DS_Store
 /.classpath
 /.project
+/bllapp/release/
